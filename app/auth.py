@@ -12,3 +12,11 @@ class AuthService:
             "SELECT id, email, role FROM users WHERE id = %s", (user_id,)
         )
         return cursor.fetchone()
+
+    def get_user_by_email(self, email):
+        """Fetch a user by email using a parameterized query."""
+        cursor = self.db.cursor()
+        cursor.execute(
+            "SELECT id, email, role FROM users WHERE email = %s", (email,)
+        )
+        return cursor.fetchone()
