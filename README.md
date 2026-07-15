@@ -1,6 +1,6 @@
 # deployguard-target
 
-> **Demo & test harness for [DeployGuard](https://github.com/Dan16ssd/Deploy-Guard-Ai-Agents-)** — a multi-agent AI system that reviews pull requests for security vulnerabilities and gates deployments.
+> **Demo & test harness for [DeployGuard](https://github.com/Dan16ssd/deployguard)** — a multi-agent AI system that reviews pull requests for security vulnerabilities and gates deployments.
 
 This repository is **not** a real product. It is a deliberately minimal application that exists to **demonstrate DeployGuard catching a real vulnerability before it merges** — giving the agent chain something concrete and reproducible to review.
 
@@ -33,7 +33,7 @@ PR opened → webhook → ScanAgent → SecurityAgent → RiskAgent → DeployAg
 This repo has a GitHub **webhook** pointed at the DeployGuard service (hosted on Railway). On every pull request, GitHub delivers the event to DeployGuard, which opens a [Band](https://band.ai) chat room where the five agents collaborate to **approve or block** the change — posting their verdict back as a PR comment.
 
 > Architecture, agents, tools, and setup live in the main project:
-> **[github.com/Dan16ssd/Deploy-Guard-Ai-Agents-](https://github.com/Dan16ssd/Deploy-Guard-Ai-Agents-)**
+> **[github.com/Dan16ssd/deployguard](https://github.com/Dan16ssd/deployguard)**
 
 ## Run the (safe) app's tests
 
